@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawer_layout"
+    android:background="#EEEE" >
+
+<androidx.core.widget.NestedScrollView
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".SubscriptionActivity">
+
+
+        <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="141dp"
+            android:layout_height="93dp"
+            android:layout_marginStart="28dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imgMenu"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imgMenu"
+            app:srcCompat="@drawable/logo" />
+
+        <ImageView
+            android:id="@+id/imgMenu"
+            android:layout_width="53dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_baseline_menu_24" />
+
+
+        <Button
+            android:id="@+id/btnPacks"
+            android:layout_width="361dp"
+            android:layout_height="64dp"
+            android:backgroundTint="@color/new_green"
+            android:text="@string/Btnaccueil"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/CardView1"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/CardView1"
+            app:layout_constraintTop_toBottomOf="@+id/CardView1"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="TouchTargetSizeCheck" />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/CardView1"
+            android:layout_width="361dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:background="#EEEE"
+            app:cardCornerRadius="7dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.58"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgLogo">
+
+            <RelativeLayout
+                android:layout_width="361dp"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/collapsedLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/btnCategories"
+                        android:layout_width="361dp"
+                        android:layout_height="51dp"
+                        android:layout_marginTop="-5dp"
+                        android:backgroundTint="@color/new_green"
+                        android:drawableLeft="@drawable/ic_baseline_menu_244"
+                        android:drawableRight="@drawable/ic_baseline_arrow_drop_down_24"
+                        android:text="@string/typebtn"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/white"
+                        android:textSize="17sp"
+                        tools:ignore="TouchTargetSizeCheck" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/expandableLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/collapsedLayout"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/aromAndMedcPlants"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="النباتات العطرية و الطبية"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/handyCrafts"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/aromAndMedcPlants"
+                        android:text="صناعات يدوية"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/craftProducts"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/handyCrafts"
+                        android:text="منتوجات حرفية"
+                        android:textSize="20sp" />
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/txtSimpleSubs"
+            android:layout_width="357dp"
+            android:layout_height="51dp"
+            android:layout_marginTop="100dp"
+            android:background="@color/new_green"
+            android:text="اشتراك عادي"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="@+id/btnPacks"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/btnPacks"
+            app:layout_constraintTop_toBottomOf="@+id/btnPacks" />
+
+        <TextView
+            android:id="@+id/txtPrice1"
+            android:layout_width="357dp"
+            android:layout_height="51dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="79 د.ت"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/txtSimpleSubs"
+            app:layout_constraintStart_toStartOf="@+id/txtSimpleSubs"
+            app:layout_constraintTop_toBottomOf="@+id/txtSimpleSubs" />
+
+        <TextView
+            android:id="@+id/txt1"
+            android:layout_width="357dp"
+            android:layout_height="51dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="حجز متجر الكتروني"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="@+id/txtPrice1"
+            app:layout_constraintStart_toStartOf="@+id/txtPrice1"
+            app:layout_constraintTop_toBottomOf="@+id/txtPrice1" />
+
+        <TextView
+            android:id="@+id/txt11"
+            android:layout_width="357dp"
+            android:layout_height="51dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="ملصقة اعلانية"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="@+id/txt1"
+            app:layout_constraintStart_toStartOf="@+id/txt1"
+            app:layout_constraintTop_toBottomOf="@+id/txt1" />
+
+        <TextView
+            android:id="@+id/txt111"
+            android:layout_width="357dp"
+            android:layout_height="51dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="@string/strike_text1"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="@+id/txt11"
+            app:layout_constraintStart_toStartOf="@+id/txt11"
+            app:layout_constraintTop_toBottomOf="@+id/txt11" />
+
+        <TextView
+            android:id="@+id/txt1111"
+            android:layout_width="357dp"
+            android:layout_height="51dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="@string/strike_text2"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="@+id/txt111"
+            app:layout_constraintStart_toStartOf="@+id/txt111"
+            app:layout_constraintTop_toBottomOf="@+id/txt111" />
+
+
+        <Button
+            android:id="@+id/btnRegister1"
+            android:layout_width="357dp"
+            android:layout_height="51dp"
+            android:backgroundTint="@color/new_green"
+            android:text="@string/register"
+            app:layout_constraintEnd_toEndOf="@+id/txt1111"
+            app:layout_constraintStart_toStartOf="@+id/txt1111"
+            app:layout_constraintTop_toBottomOf="@+id/txt1111" />
+
+        <TextView
+            android:id="@+id/txtSimpleSubs2"
+            android:layout_width="357dp"
+            android:layout_height="51dp"
+            android:layout_marginTop="150dp"
+            android:background="@color/new_green"
+            android:text="اشتراك بريميوم"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="@+id/btnRegister1"
+            app:layout_constraintStart_toStartOf="@+id/btnRegister1"
+            app:layout_constraintTop_toBottomOf="@+id/btnRegister1" />
+
+        <TextView
+            android:id="@+id/txtPrice2"
+            android:layout_width="357dp"
+            android:layout_height="51dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="199 د.ت"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/txtSimpleSubs2"
+            app:layout_constraintStart_toStartOf="@+id/txtSimpleSubs2"
+            app:layout_constraintTop_toBottomOf="@+id/txtSimpleSubs2" />
+
+        <TextView
+            android:id="@+id/txt2"
+            android:layout_width="357dp"
+            android:layout_height="51dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="حجز متجر الكتروني"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="@+id/txtPrice2"
+            app:layout_constraintStart_toStartOf="@+id/txtPrice2"
+            app:layout_constraintTop_toBottomOf="@+id/txtPrice2" />
+
+        <TextView
+            android:id="@+id/txt22"
+            android:layout_width="357dp"
+            android:layout_height="51dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="ملصقة اعلانية"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="@+id/txt2"
+            app:layout_constraintStart_toStartOf="@+id/txt2"
+            app:layout_constraintTop_toBottomOf="@+id/txt2" />
+
+        <TextView
+            android:id="@+id/txt222"
+            android:layout_width="357dp"
+            android:layout_height="51dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="فيد يو اعلا ني"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="@+id/txt22"
+            app:layout_constraintStart_toStartOf="@+id/txt22"
+            app:layout_constraintTop_toBottomOf="@+id/txt22" />
+
+        <TextView
+            android:id="@+id/txt2222"
+            android:layout_width="357dp"
+            android:layout_height="51dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="@string/strike_text2"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="@+id/txt222"
+            app:layout_constraintStart_toStartOf="@+id/txt222"
+            app:layout_constraintTop_toBottomOf="@+id/txt222" />
+
+
+        <Button
+            android:id="@+id/btnRegister2"
+            android:layout_width="357dp"
+            android:layout_height="51dp"
+            android:backgroundTint="@color/new_green"
+            android:text="@string/register"
+            app:layout_constraintEnd_toEndOf="@+id/txt2222"
+            app:layout_constraintStart_toStartOf="@+id/txt2222"
+            app:layout_constraintTop_toBottomOf="@+id/txt2222" />
+
+        <Button
+            android:id="@+id/btnRegister3"
+            android:layout_width="357dp"
+            android:layout_height="51dp"
+            android:backgroundTint="@color/new_green"
+            android:text="@string/register"
+            app:layout_constraintEnd_toEndOf="@+id/txt3333"
+            app:layout_constraintStart_toStartOf="@+id/txt3333"
+            app:layout_constraintTop_toBottomOf="@+id/txt3333" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="100dp"
+            android:background="@color/grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnRegister3">
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="276dp"
+                android:layout_height="67dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/font_regular"
+                android:text="معلومات التوصيل"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.044"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="402dp"
+                android:layout_height="129dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/tajawal_medium"
+                android:text="  خدمة التوصيل عبر موقعنا غير متاحة حاليا.
+
+لتسلم المنتوج المطلوب اتصل بالمنتج مباشرة.                                "
+                android:textSize="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView16" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:background="@color/new_green"
+            android:paddingBottom="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+
+            <TextView
+                android:layout_width="244dp"
+                android:layout_height="94dp"
+                android:layout_marginStart="64dp"
+                android:layout_marginTop="16dp"
+                android:text="القطب التكنولوجي منوبة تونس"
+                android:textColor="@color/white"
+                android:textSize="17dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="244dp"
+                android:layout_height="94dp"
+                android:layout_marginStart="132dp"
+                android:layout_marginTop="52dp"
+                android:text="contact@aggricus.com"
+                android:textColor="@color/white"
+                android:textSize="17dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="244dp"
+                android:layout_height="94dp"
+                android:layout_marginStart="148dp"
+                android:layout_marginTop="100dp"
+                android:text="(216) 23 121 302"
+                android:textColor="@color/white"
+                android:textSize="17dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="375dp"
+                android:layout_height="62dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="184dp"
+                android:text=" جميع الحقوق محفوطة.Copyright @ 2021 Aggricus"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/txtSimpleSubs3"
+            android:layout_width="357dp"
+            android:layout_height="51dp"
+            android:layout_marginTop="150dp"
+            android:background="@color/new_green"
+            android:text="اشتراك احترافي"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="@+id/btnRegister2"
+            app:layout_constraintStart_toStartOf="@+id/btnRegister2"
+            app:layout_constraintTop_toBottomOf="@+id/btnRegister2" />
+
+        <TextView
+            android:id="@+id/txtPrice3"
+            android:layout_width="357dp"
+            android:layout_height="51dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="299 د.ت"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/txtSimpleSubs3"
+            app:layout_constraintStart_toStartOf="@+id/txtSimpleSubs3"
+            app:layout_constraintTop_toBottomOf="@+id/txtSimpleSubs3" />
+
+        <TextView
+            android:id="@+id/txt3"
+            android:layout_width="357dp"
+            android:layout_height="51dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="حجز متجر الكتروني"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="@+id/txtPrice3"
+            app:layout_constraintStart_toStartOf="@+id/txtPrice3"
+            app:layout_constraintTop_toBottomOf="@+id/txtPrice3" />
+
+        <TextView
+            android:id="@+id/txt33"
+            android:layout_width="357dp"
+            android:layout_height="51dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="ملصقة اعلانية"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="@+id/txt3"
+            app:layout_constraintStart_toStartOf="@+id/txt3"
+            app:layout_constraintTop_toBottomOf="@+id/txt3" />
+
+        <TextView
+            android:id="@+id/txt333"
+            android:layout_width="357dp"
+            android:layout_height="51dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="فيد يو اعلا ني"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="@+id/txt33"
+            app:layout_constraintStart_toStartOf="@+id/txt33"
+            app:layout_constraintTop_toBottomOf="@+id/txt33" />
+
+        <TextView
+            android:id="@+id/txt3333"
+            android:layout_width="357dp"
+            android:layout_height="51dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="استشارة حول موقع تواصل اجتماعي"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="@+id/txt333"
+            app:layout_constraintStart_toStartOf="@+id/txt333"
+            app:layout_constraintTop_toBottomOf="@+id/txt333" />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/nav_header"
+
+        />
+
+</androidx.drawerlayout.widget.DrawerLayout>
